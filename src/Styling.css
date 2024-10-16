@@ -1,15 +1,16 @@
 /* header start */
 .header{
     width: 100vw;
-    background-color: red;
+    background-color: white;
     display: flex;
+    top: 0;
+    position: fixed;
     height: 15vh;
     z-index: 2;
-    position: sticky;
 }
 .logo-container{
     width: 50%;
-    background-color: green;
+    background-color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,53 +19,190 @@
 .logo-inner-container{
     width: 80%;
 }
-ul{
+.logo{
+    width: 25%;
+}
+.list-reponsive:hover{
+    color: #C75B7A;
+    cursor: pointer;
+}
+.not-responsive{
+    color: black;
     margin: 0;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: red;
+    background-color: white;
     height: 100%;
 }
 .list-container{
     height: 100%;
-    background-color: gray;
+    background-color: white;
     width: 50%;
+}
+.hamburger{
+    display: none;
+}
+.close{
+    display: none;
 }
 
 @media (max-width: 599px) { 
     .header{
-        width: 100%;
-        height: 5vh;
-        display: flex;
-        z-index: 2;
-        position: sticky;
+        position: relative;
+        height: 10vh;
+        width: 100vw;
     }
-    /* ul{
-        background-color: aqua;
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 3%;
-        height: 100%;
-        margin: 0;
+    .logo-container{
+        width: 50%;
     }
-    li{
-        font-size: 8pt;
+    .not-responsive{
+        display: none;
     }
     .list-container{
-        width: 50%;
-        background-color: aqua;
+        position: relative;
+        /* background-color: red; */
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+    }
+    /* .hamburger-container{
+        background-color: green;
+        margin: 0;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        display: block;
     } */
+    .logo{
+        width: 50%;
+    }
+    .hamburger{
+        display: block;
+        margin-right: 20px;
+    }
+    .responsive{
+        row-gap: 5px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: fit-content;
+        width: 100vw;
+        top: 10vh;
+        list-style: none;
+        background-color:white;
+        transform: translateY(-100vw);
+        transition: transform 0.5s linear;
+    }
+    .responsive.open{
+        transform: translateY(0);
+    }
+    .responsive.close{
+        transform: translateY(-100vw);
+    }
+    .list-reponsive{
+        margin: 0;
+        /* color: aqua; */
+        color: white;
+        margin-left: 20px;
+    }
+    .line{
+        height: 3%;
+        width: 100%;
+        /* background-color: red;
+        color: red; */
+    }
+    .close{
+        display: block;
+        margin-right: 20px;
+    }
 }
 
+
+@media (max-width:900px) {
+    .header{
+        height: 13vh;
+        background-color: white;
+    }
+    .logo{
+        width: 50%;
+    }
+    .logo-container{
+        width: 50%;
+    }
+    .not-responsive{
+        display: none;
+    }
+    .list-container{
+        position: relative;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    /* .hamburger-container{
+        background-color: green;
+        margin: 0;
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        display: block;
+    } */
+    .logo{
+        width: 50%;
+    }
+    .hamburger{
+        display: block;
+        margin-right: 20px;
+    }
+    .responsive{
+        row-gap: 5px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: fit-content;
+        width: 100vw;
+        top: 10vh;
+        list-style: none;
+        background-color: white;
+        transform: translateY(-100vw);
+        transition: transform 0.5s linear;
+    }
+    .responsive.open{
+        transform: translateY(0);
+    }
+    .responsive.close{
+        transform: translateY(-100vw);
+    }
+    .list-reponsive{
+        margin: 0;
+        /* color: aqua; */
+        color: white;
+        margin-left: 20px;
+    }
+    .line{
+        height: 3%;
+        width: 100%;
+        /* background-color: red;
+        color: red; */
+    }
+    .close{
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+/* @media (max-width:1400px) {
+    .header{
+        height: 5vh;
+    }
+} */
 /* header stop */
 
 
